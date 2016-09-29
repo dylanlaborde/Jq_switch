@@ -14,13 +14,16 @@ function main(){
 	// 2. dans le callback récupérez le data attribute animal
 	// 3. récupérerez dans l'objet species la valeur correspond à l'attribut récupéré
 	// 4. ajoutez élément img en assignant à son attibut src la valeur précédemment récupérée
-	// 5. inserez cet élément dans l'élément ayant l'id holder
-	// 
+		// 5. inserez cet élément dans l'élément ayant l'id holder
+	$('.ui button').click(function(){
+		var dattribute = $(this).data('animal');
+		//console.log(dattribute);
+		var nanimaux = species[dattribute];
+		//console.log(nanimaux);
+		$('img').attr('src','img/' +nanimaux);
+	});
 	// Conseils : avancez étape par étape, console.log et debugger autant que nécessaires !
-	
-	
-	 
-}
+};
 
 $(document).ready(function(){
 	main();
